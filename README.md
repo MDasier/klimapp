@@ -1,46 +1,39 @@
-# Getting Started with Create React App
+# 🌦️ KlimApp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**KlimApp** es una aplicación interactiva para obtener información sobre el clima y el pronóstico del tiempo en diferentes ciudades. Está construida con **React**, utiliza la API de **OpenWeatherMap**, y está desplegada en **Vercel**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 **Características**
 
-### `npm start`
+- Buscar ciudades y obtener el clima actual.
+- Ver el pronóstico del tiempo para los próximos días.
+- Interfaz moderna y responsiva utilizando **Material UI**.
+- Idioma en español y temperaturas en grados Celsius.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🛠️ **Tecnologías utilizadas**
 
-### `npm test`
+- **React**: Biblioteca de JavaScript para construir interfaces de usuario.
+- **TypeScript**: Extensión de JavaScript para un desarrollo más seguro y escalable.
+- **Axios**: Cliente HTTP para realizar solicitudes a la API.
+- **Lodash**: Para funciones de utilidad como el `debounce`.
+- **Material UI**: Para diseño e interfaz de usuario.
+- **OpenWeatherMap API**: Fuente de datos climáticos.
+- **Lottie**: Fuente de animaciones climáticas.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📦 **Estructura del proyecto**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+src/ ├── components/ # Componentes reutilizables │ ├── SearchBar.tsx # Barra de búsqueda de ciudades ├── services/ # Funciones de interacción con APIs │ ├── weatherApi.ts # API para obtener el clima actual │ ├── forecastApi.ts # API para obtener el pronóstico del clima │ ├── cityApi.ts # API para obtener sugerencias de ciudades ├── App.tsx # Componente principal ├── index.tsx # Punto de entrada de React
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🌐 **Demo en línea**
 
-### `npm run eject`
+Visita la DEMO de la aplicación desplegada en Vercel:  
+[**KlimApp**](https://klimapp.vercel.app)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+---

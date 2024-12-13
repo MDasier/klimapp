@@ -1,8 +1,7 @@
-// src/components/SearchBar.tsx
 import React, { useState } from "react";
 import { Autocomplete, TextField, Box } from "@mui/material";
 import { debounce } from "lodash";
-import { getCitySuggestions } from "../services/cityApi"; // Importa desde el nuevo archivo
+import { getCitySuggestions } from "../services/cityApi.ts";
 
 interface SearchBarProps {
   onSearch: (lat: number, lon: number) => void;

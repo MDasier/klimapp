@@ -1,7 +1,6 @@
-// src/services/forecastApi.ts
 import axios from "axios";
 
-const API_KEY = process.env.REACT_APP_API_KEY; // Asegúrate de tener la variable de entorno configurada correctamente
+const API_KEY = process.env.REACT_APP_API_KEY; 
 
 // Obtener pronóstico de los próximos días por coordenadas
 export const getForecast = async (latitude: number, longitude: number) => {
@@ -13,5 +12,5 @@ export const getForecast = async (latitude: number, longitude: number) => {
       units: 'metric', // Para obtener la temperatura en grados Celsius
     },
   });
-  return response.data; // La propiedad `list` contiene las predicciones cada 3 horas
+  return response.data;
 };

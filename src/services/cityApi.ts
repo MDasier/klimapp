@@ -1,7 +1,6 @@
-// src/services/cityApi.ts
 import axios from "axios";
 
-const API_KEY = process.env.REACT_APP_API_KEY; // Asegúrate de tener la variable de entorno configurada correctamente
+const API_KEY = process.env.REACT_APP_API_KEY; 
 
 // Obtener sugerencias de ciudades
 export const getCitySuggestions = async (query: string) => {

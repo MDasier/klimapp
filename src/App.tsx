@@ -1,9 +1,8 @@
-// src/App.tsx
 import React, { useEffect, useState } from "react";
 import useGeolocation from "./hooks/useGeolocation.ts";
-import { getWeatherByCoordinates } from "./services/weatherApi.ts"; // Importa desde el archivo correcto
-import { getForecast } from "./services/forecastApi.ts"; // Importa desde el archivo correcto
-import { getWeatherByCity } from "./services/weatherApi.ts"; // Importa desde el archivo correcto
+import { getWeatherByCoordinates } from "./services/weatherApi.ts";
+import { getForecast } from "./services/forecastApi.ts"; 
+import { getWeatherByCity } from "./services/weatherApi.ts"; 
 import SearchBar from "./components/SearchBar.tsx";
 import { Container, CircularProgress, Typography, Grid, Card, CardContent } from "@mui/material";
 
