@@ -1,7 +1,8 @@
+// src/components/SearchBar.tsx
 import React, { useState } from "react";
 import { Autocomplete, TextField, Box } from "@mui/material";
 import { debounce } from "lodash";
-import { getCitySuggestions } from "../services/weatherApi.ts";
+import { getCitySuggestions } from "../services/cityApi"; // Importa desde el nuevo archivo
 
 interface SearchBarProps {
   onSearch: (lat: number, lon: number) => void;
@@ -20,7 +21,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
       const suggestions = await getCitySuggestions(query);
       setOptions(suggestions);
     } catch (error) {
-      console.error("Error con las suggerencias de ciudad:", error);
+      console.error("Error con las sugerencias de ciudad:", error);
     }
   }, 150);
 
@@ -47,7 +48,6 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
         )}
         isOptionEqualToValue={(option, value) => option.name === value.name}
         noOptionsText="No se encontraron sugerencias"
-        /*getOptionSelected={(option, value) => option.name === value.name}*/ // Esto mejora la coincidencia de las opciones
         renderOption={(props, option) => (
           <li {...props} key={`${option.name || 'unknown'}-${option.country || 'unknown'}`}>
             {option.name}, {option.country}

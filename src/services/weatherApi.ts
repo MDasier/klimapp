@@ -1,8 +1,10 @@
+// src/services/weatherApi.ts
 import axios from "axios";
 
-const API_KEY = process.env.REACT_APP_API_KEY;
+const API_KEY = process.env.REACT_APP_API_KEY; // Asegúrate de tener la variable de entorno configurada correctamente
 const BASE_URL = "https://api.openweathermap.org/data/2.5/weather";
 
+// Obtener clima actual por coordenadas
 export const getWeatherByCoordinates = async (latitude: number, longitude: number) => {
   const response = await axios.get(BASE_URL, {
     params: {
@@ -15,6 +17,8 @@ export const getWeatherByCoordinates = async (latitude: number, longitude: numbe
   });
   return response.data;
 };
+
+// Obtener clima actual por ciudad
 export const getWeatherByCity = async (city: string) => {
   const response = await axios.get(BASE_URL, {
     params: {
@@ -25,33 +29,4 @@ export const getWeatherByCity = async (city: string) => {
     },
   });
   return response.data;
-};
-
-export const getCitySuggestions = async (query: string) => {
-  const response = await axios.get("http://api.openweathermap.org/geo/1.0/direct", {
-    params: {
-      q: query,
-      limit: 3, // Sugerencias en la barra de búsqueda
-      appid: API_KEY,
-    },
-  });
-  return response.data.map((city: any) => ({
-    name: city.name,
-    country: city.country,
-    lat: city.lat,
-    lon: city.lon,
-  }));
-};
-
-// Obtener pronóstico de los próximos días por coordenadas
-export const getForecast = async (latitude: number, longitude: number) => {
-  const response = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&lang=es&units=metric`, {
-    params: {
-      lat: latitude,
-      lon: longitude,
-      appid: API_KEY,
-      units: 'metric', // Para obtener la temperatura en grados Celsius
-    },
-  });
-  return response.data; // La propiedad `list` contiene las predicciones cada 3 horas
 };
