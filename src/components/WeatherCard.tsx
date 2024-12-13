@@ -24,7 +24,7 @@ const weatherAnimations: { [key: string]: any } = {
 interface WeatherData {
   name: string;
   main: { temp: number };
-  weather: { description: string }[];
+  weather: { description: string; main: string }[];
 }
 
 interface WeatherCardProps {
