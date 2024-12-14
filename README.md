@@ -1,6 +1,8 @@
 # 🌦️ Klimapp
 
 **KlimApp** es una aplicación interactiva para obtener información sobre el clima y el pronóstico del tiempo en diferentes ciudades. Está construida con **React**, utiliza la API de **OpenWeatherMap**, y está desplegada en **Vercel**.
+
+
 ![Screenshot de la pantalla de klimapp](src/klimapp.png)
 ---
 
