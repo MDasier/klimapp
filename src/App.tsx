@@ -4,7 +4,7 @@ import { getWeatherByCoordinates } from "./services/weatherApi.ts";
 import { getForecast } from "./services/forecastApi.ts"; 
 import { getWeatherByCity } from "./services/weatherApi.ts"; 
 import SearchBar from "./components/SearchBar.tsx";
-import { Container, CircularProgress, Typography, Grid, Card, CardContent } from "@mui/material";
+import { Container, CircularProgress, Typography, Grid, Card, CardContent, Link } from "@mui/material";
 import WeatherCard from "./components/WeatherCard.tsx";
 import { formatDate } from "./utils/formatDate.ts";
 
@@ -78,8 +78,18 @@ const App: React.FC = () => {
       <CircularProgress />
     ) : (
       <>
+        <Typography variant="h4" style={{padding:"10px",fontSize:"30px", textAlign:"center", marginBottom:"15px", backgroundColor:"#fff"}}>{"KLIMAPP by "}
+          <Link 
+            href="https://github.com/mdasier" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{textDecoration:"none", color:"#73899E"}}
+          >
+            MDASIER
+          </Link>
+        </Typography>
         {/* Mostrar clima actual */}
-        <Card sx={{maxWidth: "100%", display: "flex",flexDirection:"column", justifyContent: "center", alignItems: "center", textAlign: "center" }}>            
+        <Card sx={{maxWidth: "100%", display: "flex",flexDirection:"column", justifyContent: "center", alignItems: "center", textAlign: "center",marginBottom:"20px" }}>            
           {weather && <WeatherCard weather={weather} />}
           
           <Typography variant="h4">{currentTime}</Typography>
@@ -100,6 +110,26 @@ const App: React.FC = () => {
             ))}
           </Grid>
         )}
+        <Typography variant="h6" style={{textAlign:"center", marginTop:"15px"}}>{"KLIMAPP by "}
+        <Link 
+          href="https://github.com/mdasier" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          style={{textDecoration:"none", color:"#73899E"}}
+        >
+          MDASIER
+        </Link>
+        </Typography>
+        <Typography variant="h6" style={{textAlign:"center"}}>
+        <Link 
+          href="https://www.linkedin.com/in/asiermd/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          style={{textDecoration:"none", color:"#73899E"}}
+        >
+          Linkedin
+        </Link>
+        </Typography>
       </>
     )}
   </Container>

@@ -27,7 +27,7 @@
 
 ## 📦 **Estructura del proyecto**
 
-src/ ├── components/ # Componentes reutilizables │ ├── SearchBar.tsx # Barra de búsqueda de ciudades ├── services/ # Funciones de interacción con APIs │ ├── weatherApi.ts # API para obtener el clima actual │ ├── forecastApi.ts # API para obtener el pronóstico del clima │ ├── cityApi.ts # API para obtener sugerencias de ciudades ├── App.tsx # Componente principal ├── index.tsx # Punto de entrada de React
+src/ ├── components/ # Componentes reutilizables │ ├── SearchBar.tsx # Barra de búsqueda de ciudades├── WeatherCard.tsx # Componente para mostrar los datos del clima ├── services/ # Funciones de interacción con APIs │ ├── weatherApi.ts # API para obtener el clima actual │ ├── forecastApi.ts # API para obtener el pronóstico del clima │ ├── cityApi.ts # API para obtener sugerencias de ciudades ├── App.tsx # Componente principal ├── index.tsx # Punto de entrada de React
 
 ---
 
@@ -37,3 +37,6 @@ Visita la DEMO de la aplicación desplegada en Vercel:
 [**KlimApp**](https://klimapp.vercel.app)
 
 ---
+
+## **AsierMD en Linkedin** 
+[**Linkedin**](https://www.linkedin.com/in/asiermd/)
